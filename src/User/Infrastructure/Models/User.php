@@ -12,6 +12,7 @@ class User extends Authenticatable implements JWTSubject
     use Notifiable;
     use HasFactory;
 
+    protected $guarded = ['id'];
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

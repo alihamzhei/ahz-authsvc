@@ -57,20 +57,8 @@ return [
         |
         */
 
-        'public' => env('JWT_PUBLIC_KEY'),
-
-        /*
-        |--------------------------------------------------------------------------
-        | Private Key
-        |--------------------------------------------------------------------------
-        |
-        | A path or resource to your private key.
-        |
-        | E.g. 'file://path/to/private/key'
-        |
-        */
-
-        'private' => env('JWT_PRIVATE_KEY'),
+        'public' => 'file://'.storage_path(env('JWT_PUBLIC_KEY')),
+        'private' => 'file://'.storage_path(env('JWT_PRIVATE_KEY')),
 
         /*
         |--------------------------------------------------------------------------
